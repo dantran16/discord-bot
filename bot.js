@@ -31,7 +31,6 @@ client.on("messageCreate", msg => {
 
 //Replaying to commands
 client.on('interactionCreate', async interaction => {
-  console.log(interaction);
 	if (!interaction.isCommand()) return;
 
 	const { commandName } = interaction;
