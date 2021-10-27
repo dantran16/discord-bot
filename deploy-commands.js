@@ -8,7 +8,9 @@ const { DISCORD_TOKEN, GUILD_ID, CLIENT_ID } = process.env;
 const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
 	new SlashCommandBuilder().setName('server').setDescription('Replies with server info!'),
-	new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
+  new SlashCommandBuilder().setName('user').setDescription('Replies with user info!'),
+  new SlashCommandBuilder().setName('gif').setDescription('Gets a gif')
+    .addStringOption(option => option.setName('search').setDescription('Type anything you want to see as a GIF'))
 ]
 	.map(command => command.toJSON());
 
